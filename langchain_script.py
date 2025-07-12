@@ -1,7 +1,9 @@
 import time
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
-from secret_key import GEMINI_API_KEY
+import os
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 
 # Gemini model setup
 llm = ChatGoogleGenerativeAI(
